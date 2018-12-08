@@ -62,8 +62,7 @@ int resolve_hosts(int num_hosts, char *hostlist[])
 
 	for (int i = 0; i < num_hosts; ++i) {
 		printf("Host: %s\n", hostlist[i]);
-
-		int num_addr = find_addresses(hostlist[i]);		
+		int num_addr = find_addresses(hostlist[i]);
 		if (num_addr == -1)
 			res = -1;
 		else if (num_addr > 0 && i != num_hosts - 1)
